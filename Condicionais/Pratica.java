@@ -89,7 +89,8 @@ public class Pratica {
         System.out.println("Digite o dia da semana(em letras minúsculas): ");
         String diaSemana = leitura.nextLine();
 
-        if (diaSemana.equals("segunda") || diaSemana.equals("terça") || diaSemana.equals("quarta") || diaSemana.equals("quinta") || diaSemana.equals("sexta")) {
+        if (diaSemana.equals("segunda") || diaSemana.equals("terça") || diaSemana.equals("quarta")
+                || diaSemana.equals("quinta") || diaSemana.equals("sexta")) {
             System.out.println(diaSemana + " é um dia útil.\n");
         } else {
             System.out.println(diaSemana + " não é um dia útil.\n");
@@ -104,6 +105,65 @@ public class Pratica {
             System.out.println("O valor " + emprestimo + ", não esta dentro do intervalo permitido.");
         } else {
             System.out.println("Empréstimo solicitado com sucesso.");
+        }
+
+        // verifica triângulo
+        System.out.println("Digite o primeiro lado: ");
+        int lado1 = leitura.nextInt();
+        leitura.nextLine();
+
+        System.out.println("Digite o segundo lado: ");
+        int lado2 = leitura.nextInt();
+        leitura.nextLine();
+
+        System.out.println("Digite o terceiro lado: ");
+        int lado3 = leitura.nextInt();
+        leitura.nextLine();
+
+        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+            System.out.println("Os lados podem formar um triângulo.");
+        } else {
+            System.out.println("Os lados não podem formar um triângulo.");
+        }
+
+        // compatibilidade de sangue
+        System.out.println("Informe a idade do doador: ");
+        int idadeDoador = leitura.nextInt();
+        leitura.nextLine();
+
+        System.out.println("Informe o peso do doador: ");
+        double pesoDoador = leitura.nextDouble();
+        leitura.nextLine();
+
+        if (idadeDoador < 18 && pesoDoador <= 50) {
+            System.out.println("O doador não é compatível.");
+            System.out.println("Motivo: Deve ter idade entre 18 e 65 anos e pesar mais de 50kg");
+        } else if (idadeDoador >= 18 && pesoDoador <= 50) {
+            System.out.println("O doador não é compatível.");
+            System.out.println("Motivo: Deve pesar mais de 50kg");
+        } else if (idadeDoador < 18 && pesoDoador > 50) {
+            System.out.println("O doador não é compatível.");
+            System.out.println("Motivo: Deve ter idade entre 18 e 65 anos.");
+        } else {
+            System.out.println("O doador é compatível.");
+        }
+
+        // código de acesso e nível de permissão 
+        int codigoAcesso = 537;
+        System.out.println("Digite o código de acesso: ");
+        int tentaCod = leitura.nextInt();
+        leitura.nextLine();
+
+        System.out.println("Digite o nível de permissão: ");
+        int nivelPermissao = leitura.nextInt();
+        leitura.nextLine();
+
+        if (tentaCod == codigoAcesso && nivelPermissao == 1 || nivelPermissao == 2 || nivelPermissao == 3) {
+            System.out.println("Acesso liberado, bem-vindo ao sistema!");
+        } else if (tentaCod != codigoAcesso) {
+            System.out.println("Acesso negado, código incorreto!");
+        } else {
+            System.out.println("Você não tem permissão para acessar o sitema!");
         }
     }
 }
