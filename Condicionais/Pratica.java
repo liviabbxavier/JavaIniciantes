@@ -94,5 +94,16 @@ public class Pratica {
         } else {
             System.out.println(diaSemana + " não é um dia útil.\n");
         }
+
+        // número em intervalo
+        System.out.println("Digite o valor de empréstimo:");
+        double emprestimo = leitura.nextDouble();
+        leitura.nextLine();
+
+        if (emprestimo > 500) {
+            System.out.println("O valor " + emprestimo + ", não esta dentro do intervalo permitido.");
+        } else {
+            System.out.println("Empréstimo solicitado com sucesso.");
+        }
     }
 }
