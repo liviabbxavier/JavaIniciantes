@@ -2,11 +2,8 @@ package OrientacaoObjeto.Abstracao;
 
 public class Principal {
     // Benefícios POO: Organização, reutilização, facilita a manutenção, escalabilidade, modularidade
-    // Quatro pilares:
+    // Quatro pilares: Abstração, poliformismo, herança, encapsulamento
     // Abstração: Pega um elemento da vida real e transforma em um código
-    // Poliformismo: 
-    // Herança: Herda um atributo da chamada 'classe mãe'
-    // Encapsulamento: 
     public static void main(String[] args) {
         Funcionario funcionario1 = new Funcionario();
         funcionario1.nome = "Ana";
